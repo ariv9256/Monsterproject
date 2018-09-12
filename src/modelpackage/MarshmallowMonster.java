@@ -8,7 +8,8 @@ public class MarshmallowMonster
 	private int eyeCount;
 	private boolean hasNoses;
 	private int armCount;
-	
+	// 12-58 Is Getter values
+	// 59-83 Is Setter values
 	public MarshmallowMonster()
 	{
 		//Default constructor, not very helpful.
@@ -80,7 +81,7 @@ public class MarshmallowMonster
 		this.armCount = armCount;
 	}
 	
-	public String toString()
+	public String toString() //Outputting monster information that the user types in
 	{
 		String description = "This monster is named: " + name + " and it has " + legCount + " legs... " + "Its favorite silly/scary/spooky thing to say is: " + "boo!";
 		
