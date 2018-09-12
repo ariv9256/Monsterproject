@@ -49,6 +49,9 @@ public class Controller
 		boolean hasNoses = inputScanner.nextBoolean();
 		userMonster.setHasNoses(hasNoses);
 		System.out.println("Your monster has a nose: " + userMonster.getHasNoses());
+		
+		System.out.println("Your monsters name is " + userMonster.getName() + " and he has " + userMonster.getArmCount() + " arms, " + userMonster.getLegCount() + " legs, " + userMonster.getEyeCount() + " eyes, and has nose: " + userMonster.getHasNoses());
+		//Added over all output data of all the variables in one sentence.
 		inputScanner.close();
 		//All code above is based around asking for input, taking the input, and showing the input using the different variables.	
 	}
