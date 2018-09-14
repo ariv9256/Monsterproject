@@ -30,6 +30,7 @@ public class MarshmallowMonster
 		
 	}
 	
+	// Getting leg, arm, eye, name, and nose count
 	public String getName()
 	{
 		return name;
@@ -56,6 +57,7 @@ public class MarshmallowMonster
 		return armCount;
 	}
 	
+	// Sets name, legs, eyes, noses, and arms variable names
 	public void setName(String name)
 	{
 		this.name = name;

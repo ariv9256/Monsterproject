@@ -1,8 +1,8 @@
 package controllerpackage;
 
 import java.util.Scanner;
-
 import modelpackage.MarshmallowMonster;
+import javax.swing.JOptionPane; // New Swing class!
 
 public class Controller
 {
@@ -22,38 +22,94 @@ public class Controller
 	}
 
 	public void start() // Question, Input, Set/Get variable, Output.
+
 	{
+		JOptionPane.showMessageDialog(null, myMonster);
 		System.out.println(myMonster);// only my monster
 		
-		System.out.println("What would you like to name your monster?");
-		String name = inputScanner.nextLine();
-		userMonster.setName(name);
-		System.out.println("Your monster's name is... " + userMonster.getName());
+		//System.out.println("What would you like to name your monster?");
+		//JOptionPane.showMessageDialog(null, "What would you like to name your monster?");
+		//String name = inputScanner.nextLine();
 		
-		System.out.println("How many arms for your monster?");
-		int arms = inputScanner.nextInt();
-		userMonster.setArmCount(arms);
-		System.out.println("Your monster has " + userMonster.getArmCount() + " arms!");
+		String userInput = JOptionPane.showInputDialog(null, "What would you like to name your monster?");
 		
-		System.out.println("How many eyes for your monster?");
-		int eyeCount = inputScanner.nextInt();
-		userMonster.setEyeCount(eyeCount);
-		System.out.println("Your monster has " + userMonster.getEyeCount() + " eyes!");
+		//userMonster.setName(name);
+		//System.out.println("Your monster's name is... " + userMonster.getName());
 		
-		System.out.println("How many legs for your monster?");
-		double legCount = inputScanner.nextDouble();
-		userMonster.setLegCount(legCount);
-		System.out.println("Your monster has " + userMonster.getLegCount() + " many legs!");
+		///System.out.println("How many arms for your monster?");
+		//JOptionPane.showMessageDialog(null, "How many arms for your monster?");
+		//int arms = inputScanner.nextInt();
 		
-		System.out.println("Do you want your monster to have a nose?");
-		boolean hasNoses = inputScanner.nextBoolean();
-		userMonster.setHasNoses(hasNoses);
-		System.out.println("Your monster has a nose: " + userMonster.getHasNoses());
+		userInput = JOptionPane.showInputDialog(null, "How many arms for your monster?");
+		
+		//userMonster.setArmCount(arms);
+		//System.out.println("Your monster has " + userMonster.getArmCount() + " arms!");
+		
+		//System.out.println("How many eyes for your monster?");
+		//JOptionPane.showMessageDialog(null,  "How many eyes for your monster?");
+		//int eyeCount = inputScanner.nextInt();
+		
+		userInput = JOptionPane.showInputDialog(null, "How many eyes for your monster?");
+		
+		//userMonster.setEyeCount(eyeCount);
+		//System.out.println("Your monster has " + userMonster.getEyeCount() + " eyes!");
+		
+		//System.out.println("How many legs for your monster?");
+		//JOptionPane.showMessageDialog(null, "How many legs for your monster?");
+		//double legCount = inputScanner.nextDouble();
+		
+		userInput = JOptionPane.showInputDialog(null, "How many legs for your monster?");
+		
+		//userMonster.setLegCount(legCount);
+		//System.out.println("Your monster has " + userMonster.getLegCount() + " many legs!");
+		
+		//System.out.println("Do you want your monster to have a nose?");
+		//JOptionPane.showMessageDialog(null,  "Does your monster have a nose?");
+		//boolean hasNoses = inputScanner.nextBoolean();
+		
+		userInput = JOptionPane.showInputDialog(null, "Does your monster have a nose? T/F");
+		
+		//userMonster.setHasNoses(hasNoses);
+		//System.out.println("Your monster has a nose: " + userMonster.getHasNoses());
 		
 		System.out.println("Your monsters name is " + userMonster.getName() + " and he has " + userMonster.getArmCount() + " arms, " + userMonster.getLegCount() + " legs, " + userMonster.getEyeCount() + " eyes, and has nose: " + userMonster.getHasNoses());
 		//Added over all output data of all the variables in one sentence.
 		inputScanner.close();
-		//All code above is based around asking for input, taking the input, and showing the input using the different variables.	
+		//All code above is based around asking for input, taking the input, and showing the input using the different variables.
+		
+	}
+	
+	public boolean validInt(String maybeInt) // Swing boolean window responses for whole numbers
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Integer.parseInt(maybeInt);
+			isValid = true;
+		}
+		catch (NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "You'll need to type in a whole number :D");
+		}
+		
+		return isValid;
+	}
+	
+	public boolean validDouble(String mightBeDouble) // Swing boolean window for decimals
+	{
+		boolean isValid = false;
+		
+		try
+		{
+			Double.parseDouble(mightBeDouble);
+			isValid = true;
+		}
+		catch(NumberFormatException error)
+		{
+			JOptionPane.showMessageDialog(null, "Type in a decimal value AKA a number with a . in the middle");
+		}
+		return isValid;
 	}
 }
 
