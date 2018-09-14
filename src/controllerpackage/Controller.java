@@ -32,6 +32,8 @@ public class Controller
 		//String name = inputScanner.nextLine();
 		
 		String userInput = JOptionPane.showInputDialog(null, "What would you like to name your monster?");
+		String name = userInput;
+		userMonster.setName(name);
 		
 		//userMonster.setName(name);
 		//System.out.println("Your monster's name is... " + userMonster.getName());
@@ -41,14 +43,13 @@ public class Controller
 		//int arms = inputScanner.nextInt();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many arms for your monster?");
-		int arms = -99;
+		int armCount = 0;
 		if (validInt(userInput))
 		{
-			arms = Integer.parseInt(userInput);
+			armCount = Integer.parseInt(userInput);
 		}
-		boolean answer = Boolean.parseBoolean(userInput);
 		
-		//userMonster.setArmCount(arms);
+		userMonster.setArmCount(armCount);
 		//System.out.println("Your monster has " + userMonster.getArmCount() + " arms!");
 		
 		//System.out.println("How many eyes for your monster?");
@@ -56,14 +57,13 @@ public class Controller
 		//int eyeCount = inputScanner.nextInt();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many eyes for your monster?");
-		int eyes = -99;
+		int eyeCount = 0;
 		if (validInt(userInput))
 		{
-			eyes = Integer.parseInt(userInput);
+			eyeCount = Integer.parseInt(userInput);
 		}
-		answer = Boolean.parseBoolean(userInput);
 		
-		//userMonster.setEyeCount(eyeCount);
+		userMonster.setEyeCount(eyeCount);
 		//System.out.println("Your monster has " + userMonster.getEyeCount() + " eyes!");
 		
 		//System.out.println("How many legs for your monster?");
@@ -71,14 +71,14 @@ public class Controller
 		//double legCount = inputScanner.nextDouble();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many legs for your monster?");
-		int leg = -99;
+		int legCount = 0;
 		if(validInt(userInput))
 		{
-			leg = Integer.parseInt(userInput);
+			legCount = Integer.parseInt(userInput);
 		}
-		answer = Boolean.parseBoolean(userInput);
 		
-		//userMonster.setLegCount(legCount);
+		
+		userMonster.setLegCount(legCount);
 		//System.out.println("Your monster has " + userMonster.getLegCount() + " many legs!");
 		
 		//System.out.println("Do you want your monster to have a nose?");
@@ -89,11 +89,12 @@ public class Controller
 		boolean hasNoses;
 		hasNoses = Boolean.parseBoolean(userInput);
 		
-		//userMonster.setHasNoses(hasNoses);
+		userMonster.setHasNoses(hasNoses);
 		//System.out.println("Your monster has a nose: " + userMonster.getHasNoses());
 		
-		System.out.println("Your monsters name is " + userMonster.getName() + " and he has " + userMonster.getArmCount() + " arms, " + userMonster.getLegCount() + " legs, " + userMonster.getEyeCount() + " eyes, and has nose: " + userMonster.getHasNoses());
+		//System.out.println("Your monsters name is " + userMonster.getName() + " and he has " + userMonster.getArmCount() + " arms, " + userMonster.getLegCount() + " legs, " + userMonster.getEyeCount() + " eyes, and has nose: " + userMonster.getHasNoses());
 		//Added over all output data of all the variables in one sentence.
+		JOptionPane.showMessageDialog(null, userMonster);
 		inputScanner.close();
 		//All code above is based around asking for input, taking the input, and showing the input using the different variables.
 		

@@ -85,7 +85,7 @@ public class MarshmallowMonster
 	
 	public String toString() //Outputting monster information that the user types in
 	{
-		String description = "This monster is named: " + name + " and it has " + legCount + " legs... " + "Its favorite silly/scary/spooky thing to say is: " + "boo!";
+		String description = "This monster is named: " + name + " and it has " + legCount + " legs, " + armCount + " arms, " + eyeCount + " eyes, and has nose:  " + hasNoses + ".";
 		
 		return description;
 	}
