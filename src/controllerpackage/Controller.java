@@ -41,6 +41,12 @@ public class Controller
 		//int arms = inputScanner.nextInt();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many arms for your monster?");
+		int arms = -99;
+		if (validInt(userInput))
+		{
+			arms = Integer.parseInt(userInput);
+		}
+		boolean answer = Boolean.parseBoolean(userInput);
 		
 		//userMonster.setArmCount(arms);
 		//System.out.println("Your monster has " + userMonster.getArmCount() + " arms!");
@@ -50,6 +56,12 @@ public class Controller
 		//int eyeCount = inputScanner.nextInt();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many eyes for your monster?");
+		int eyes = -99;
+		if (validInt(userInput))
+		{
+			eyes = Integer.parseInt(userInput);
+		}
+		answer = Boolean.parseBoolean(userInput);
 		
 		//userMonster.setEyeCount(eyeCount);
 		//System.out.println("Your monster has " + userMonster.getEyeCount() + " eyes!");
@@ -59,6 +71,12 @@ public class Controller
 		//double legCount = inputScanner.nextDouble();
 		
 		userInput = JOptionPane.showInputDialog(null, "How many legs for your monster?");
+		int leg = -99;
+		if(validInt(userInput))
+		{
+			leg = Integer.parseInt(userInput);
+		}
+		answer = Boolean.parseBoolean(userInput);
 		
 		//userMonster.setLegCount(legCount);
 		//System.out.println("Your monster has " + userMonster.getLegCount() + " many legs!");
@@ -68,6 +86,8 @@ public class Controller
 		//boolean hasNoses = inputScanner.nextBoolean();
 		
 		userInput = JOptionPane.showInputDialog(null, "Does your monster have a nose? T/F");
+		boolean hasNoses;
+		hasNoses = Boolean.parseBoolean(userInput);
 		
 		//userMonster.setHasNoses(hasNoses);
 		//System.out.println("Your monster has a nose: " + userMonster.getHasNoses());
