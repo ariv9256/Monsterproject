@@ -52,7 +52,7 @@ public class Controller
 		userMonster.setArmCount(armCount);
 		if(armCount > 0)
 		{
-			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " legs");
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " legs!");
 			
 		}
 		else
@@ -73,6 +73,14 @@ public class Controller
 		}
 		
 		userMonster.setEyeCount(eyeCount);
+		if(eyeCount > 0)
+		{
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getEyeCount() + " many eyes!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getEyeCount() + " many eyes, how sad.");
+		}
 		//System.out.println("Your monster has " + userMonster.getEyeCount() + " eyes!");
 		
 		//System.out.println("How many legs for your monster?");
@@ -86,8 +94,15 @@ public class Controller
 			legCount = Integer.parseInt(userInput);
 		}
 		
-		
 		userMonster.setLegCount(legCount);
+		if(legCount > 0)
+		{
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getLegCount() + " many legs!");
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getLegCount() + " many legs, so sad...");
+		}
 		//System.out.println("Your monster has " + userMonster.getLegCount() + " many legs!");
 		
 		//System.out.println("Do you want your monster to have a nose?");
