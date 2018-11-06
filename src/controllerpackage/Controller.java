@@ -52,12 +52,12 @@ public class Controller
 		userMonster.setArmCount(armCount);
 		if(armCount > 0)
 		{
-			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " legs!");
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " arms!");
 			
 		}
 		else
 		{
-			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " legs, so sad.");
+			JOptionPane.showMessageDialog(null, "your monster has " + userMonster.getArmCount() + " arms, so sad.");
 		}
 		//System.out.println("Your monster has " + userMonster.getArmCount() + " arms!");
 		
